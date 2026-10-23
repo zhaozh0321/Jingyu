@@ -2,6 +2,7 @@
   <img src="docs/assets/jingyu-mark.svg" width="88" alt="鲸语标识" />
   <h1>鲸语 · Jingyu</h1>
   <p>简洁、原生、注重阅读体验的 Android DeepSeek 客户端。</p>
+  <p><a href="https://github.com/zhaozh0321/Jingyu/actions/workflows/android.yml"><img src="https://github.com/zhaozh0321/Jingyu/actions/workflows/android.yml/badge.svg" alt="Android checks" /></a></p>
   <p><a href="#快速开始">快速开始</a> · <a href="docs/BUILDING.md">构建</a> · <a href="docs/ARCHITECTURE.md">架构</a> · <a href="CHANGELOG.md">更新日志</a> · <a href="CONTRIBUTING.md">参与贡献</a></p>
 </div>
 
@@ -32,7 +33,7 @@ PPT、HTML、任意代码执行和任意 Office 版式复刻不在当前能力�
 
 Windows 使用 `gradlew.bat`。需要 JDK 17 和 Android SDK 35；Gradle Wrapper 固定为 8.11.1。开发包使用独立应用 ID `cn.jingyu.deepseek.debug`，不会覆盖正式版。
 
-网络受限时，可以沿用已验证的 PowerShell 轻量构建路径，见 [构建文档](docs/BUILDING.md)。Gradle 工程和 CI 配置已补齐，但本次环境无法下载 Gradle/AGP，尚未完成 Gradle 路径实跑，不能视为 CI 已通过。
+网络受限时，可以沿用已验证的 PowerShell 轻量构建路径，见 [构建文档](docs/BUILDING.md)。Gradle 路径已在 GitHub Actions 上实跑通过：`assembleDebug`、`testDebugUnitTest` 和 `lintDebug` 全部成功，产物为 `app-debug.apk`。可查看 [构建记录](https://github.com/zhaozh0321/Jingyu/actions/workflows/android.yml)。
 
 ## 项目结构
 
@@ -47,7 +48,7 @@ Windows 使用 `gradlew.bat`。需要 JDK 17 和 Android SDK 35；Gradle Wrapper
 
 ## 验证状态
 
-2.2.1 已有 **117 项主机回归检查**：95 项核心/文件/体验检查，加 22 项帧调度、贴底和原文边界检查。显示时钟与视图替身验证的是逻辑，不能代替 Android 实机帧率测量。本次未完成真机视觉与流畅度验收，详见 [测试说明](docs/TESTING.md)。
+2.2.1 已有 **117 项主机回归检查**：95 项核心/文件/体验检查，加 22 项帧调度、贴底和原文边界检查。`lintDebug` 为 0 错误。显示时钟与视图替身验证的是逻辑，不能代替 Android 实机帧率测量。本次未完成真机视觉与流畅度验收，详见 [测试说明](docs/TESTING.md)。
 
 ## 数据与隐私
 

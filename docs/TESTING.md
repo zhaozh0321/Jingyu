@@ -14,7 +14,7 @@ Gradle 的 JUnit 入口位于 `app/src/test/`，复用这些产物与逻辑回�
 
 ## 尚需验收
 
-Gradle/CI 路径尚未在本次受限环境完成依赖下载和实跑。新增 UI 改动没有完成 Android 设备截图、帧耗时和卡顿率测量；不能把主机调度检查称为实机性能结果。
+Gradle 路径已在 GitHub Actions 实跑：`assembleDebug`、`testDebugUnitTest`、`lintDebug` 均通过，`lintDebug` 为 0 错误，产出 `app-debug.apk`。新增 UI 改动仍未完成 Android 设备截图、帧耗时和卡顿率测量；不能把主机调度检查称为实机性能结果。
 
 设备验收应覆盖：浅/深色；大字号；键盘与旋转；长回答增长与结束；用户上翻时不抢滚动；重连、中断和恢复；代码/公式/表格边界；TalkBack；文件打开、保存和分享。可用 `adb shell dumpsys gfxinfo cn.jingyu.deepseek framestats` 记录真实帧数据。
 

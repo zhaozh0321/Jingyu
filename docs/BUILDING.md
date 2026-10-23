@@ -10,7 +10,7 @@
 
 输出在 `app/build/outputs/apk/debug/`。Debug 应用 ID 带 `.debug`，可与正式版共存。请在应用设置中自行填写 API Key，构建不需要真实 API Key。
 
-工具链固定为 AGP 8.9.2、Gradle 8.11.1、JDK 17。Wrapper JAR 和发行包校验值来自 Gradle 官方校验页：https://gradle.org/release-checksums/ 。本次环境尚未跑通网络依赖下载，因此 Gradle/CI 的实际运行仍需在有网络的环境验收。
+工具链固定为 AGP 8.9.2、Gradle 8.11.1、JDK 17。Wrapper JAR 和发行包校验值来自 Gradle 官方校验页：https://gradle.org/release-checksums/ 。这条路径已在 GitHub Actions 的 `Android checks` 工作流中实跑通过，日志与产物见 https://github.com/zhaozh0321/Jingyu/actions/workflows/android.yml 。
 
 ## 已验证的 PowerShell 轻量路径
 
