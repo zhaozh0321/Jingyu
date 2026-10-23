@@ -12,6 +12,7 @@ public final class HostQualityTest {
  private static JSONObject chat(String text)throws Exception{return new JSONObject().put("title","文档测试").put("messages",new JSONArray().put(user(text)));}
  private static String xml(File file,String entry)throws Exception{try(ZipFile z=new ZipFile(file);InputStream in=z.getInputStream(z.getEntry(entry))){return new String(in.readAllBytes(),java.nio.charset.StandardCharsets.UTF_8);}}
  public static void main(String[] argv)throws Exception{
+  checks=0;
   File out=new File(argv[0]);out.mkdirs();
   check(FileRequests.infer("帮我做一份控制系统word文档").equals("docx"),"Chinese adjacent Word request is routed");
   check(FileRequests.infer("把上述内容导出为PDF").equals("pdf"),"PDF conversion request is routed");

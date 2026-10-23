@@ -10,6 +10,7 @@ public final class PublishingQualityTest {
  private static void rejects(Action call,String label)throws Exception{try{call.run();throw new AssertionError(label);}catch(IOException expected){check(true,label);}}
  private static String xml(File file,String entry)throws Exception{try(ZipFile z=new ZipFile(file);InputStream in=z.getInputStream(z.getEntry(entry))){return new String(in.readAllBytes(),"UTF-8");}}
  public static void main(String[] args)throws Exception {
+  checks=0;
   HostQualityTest.main(args);File out=new File(args[0]);
   near(LocalCalculator.calculate(new JSONObject().put("expression","100/(2*sqrt(100))")).getDouble("value"),5,"upstream engine evaluates nested expression");
   near(LocalCalculator.calculate(new JSONObject().put("expression","-2^2+2^3^2")).getDouble("value"),508,"unary sign and right associative power agree with mathematical convention");
