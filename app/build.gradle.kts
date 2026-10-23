@@ -51,6 +51,9 @@ android {
     }
     testOptions.unitTests.all {
         it.systemProperty("jingyu.repoRoot", rootProject.projectDir.absolutePath)
+        // The regression suites report their own totals; keep them in CI logs so the
+        // published check count can be verified from a build instead of trusted.
+        it.testLogging.showStandardStreams = true
     }
     packaging.resources.excludes += setOf("META-INF/LICENSE*", "META-INF/NOTICE*", "META-INF/DEPENDENCIES")
     androidResources { noCompress += "ttf" }
