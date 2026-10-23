@@ -22,16 +22,22 @@ PPT、HTML、任意代码执行和任意 Office 版式复刻不在当前能力�
 
 ## 下载与安装
 
-安装包统一在 [Releases](https://github.com/zhaozh0321/Jingyu/releases) 页面发布，仓库不存放 APK。
+**[下载鲸语 2.2.1 正式版 APK](https://github.com/zhaozh0321/Jingyu/releases/download/v2.2.1/Jingyu-2.2.1.apk)**（4.4 MB，Android 8.0 及以上）
 
 | 渠道 | 应用 ID | 说明 |
 | --- | --- | --- |
+| 正式版 | `cn.jingyu.deepseek` | 官方证书签名的发布包，可直接覆盖升级旧版本。当前版本 [2.2.1](https://github.com/zhaozh0321/Jingyu/releases/tag/v2.2.1)。 |
 | 开发预览版 | `cn.jingyu.deepseek.debug` | 由 CI 从公开源码构建的 debug 包，使用 debug 签名、跳过正式签名门禁，可与正式版共存。仅用于试用和排障。 |
-| 正式版 | `cn.jingyu.deepseek` | 维护者用官方证书签名的包，可直接升级覆盖旧版本。目前尚未发布正式包。 |
 
-当前可下载：[鲸语 2.2.1 开发预览版](https://github.com/zhaozh0321/Jingyu/releases/tag/v2.2.1-dev.1)（4.4 MB）。
+正式包 `Jingyu-2.2.1.apk` 校验信息：
+
+- 文件大小 4,654,397 字节，SHA-256 `76604e20cf23c96e6bc1fc41912fa80df2adb176c80313f672a5f0efb0412cf5`
+- 签名证书 SHA-256 `13e311e9a9583813c876a3cae3496f73e81177e70840edc590c01a10d7432cd7`，与 `app/build.gradle.kts` 中固定的官方指纹一致，v2 与 v3 双签名
+- 可用 `apksigner verify --print-certs Jingyu-2.2.1.apk` 核对
 
 开发预览版在 Release 中以 `-dev` 后缀和 prerelease 标记区分，不会被当作正式版。每次 `Android checks` 成功后的构建产物也可在 [Actions](https://github.com/zhaozh0321/Jingyu/actions/workflows/android.yml) 的 `jingyu-development-apk` 附件中取得，该附件需要登录 GitHub 才能下载。
+
+两个渠道都要求 Android 8.0（API 26）及以上。安装后首次使用需要在应用的“账户与连接”中填写自己的 DeepSeek API Key。
 
 两个渠道都要求 Android 8.0（API 26）及以上。安装后首次使用需要在应用的“账户与连接”中填写自己的 DeepSeek API Key。
 

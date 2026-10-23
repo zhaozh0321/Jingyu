@@ -11,6 +11,7 @@
 - 源码以 249 个文件的完整源码树公开发布；修正首页 README 的 UTF-8 中文编码。
 - Gradle 路径在 CI 实跑通过：组装、单测与 lint 全绿，lint 0 错误。
 - 修正 `gradlew` 缺少可执行位、`windowLightNavigationBar` 的 API 级别标注，以及字面量整型参数导致的 lint 错误。
+- 发布 2.2.1 正式版签名包（应用 ID `cn.jingyu.deepseek`，官方证书 `13e311e9…`），README 给出下载直链、文件 SHA-256 与证书指纹。
 
 ## [2.2.0] - 2026-10-23
 
