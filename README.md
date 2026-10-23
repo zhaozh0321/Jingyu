@@ -3,7 +3,7 @@
   <h1>鲸语 · Jingyu</h1>
   <p>简洁、原生、注重阅读体验的 Android DeepSeek 客户端。</p>
   <p><a href="https://github.com/zhaozh0321/Jingyu/actions/workflows/android.yml"><img src="https://github.com/zhaozh0321/Jingyu/actions/workflows/android.yml/badge.svg" alt="Android checks" /></a></p>
-  <p><a href="#快速开始">快速开始</a> · <a href="docs/BUILDING.md">构建</a> · <a href="docs/ARCHITECTURE.md">架构</a> · <a href="CHANGELOG.md">更新日志</a> · <a href="CONTRIBUTING.md">参与贡献</a></p>
+  <p><a href="#下载与安装">下载</a> · <a href="#快速开始">快速开始</a> · <a href="docs/BUILDING.md">构建</a> · <a href="docs/ARCHITECTURE.md">架构</a> · <a href="CHANGELOG.md">更新日志</a> · <a href="CONTRIBUTING.md">参与贡献</a></p>
 </div>
 
 ## 项目简介
@@ -20,9 +20,22 @@
 
 PPT、HTML、任意代码执行和任意 Office 版式复刻不在当前能力范围内。联网能力取决于服务端工具接口的可用性。
 
+## 下载与安装
+
+安装包统一在 [Releases](https://github.com/zhaozh0321/Jingyu/releases) 页面发布，仓库不存放 APK。
+
+| 渠道 | 应用 ID | 说明 |
+| --- | --- | --- |
+| 正式版 | `cn.jingyu.deepseek` | 维护者用官方证书签名的包，可直接升级覆盖旧版本。目前尚未发布正式包。 |
+| 开发预览版 | `cn.jingyu.deepseek.debug` | 由 CI 从公开源码构建的 debug 包，使用 debug 签名、跳过正式签名门禁，可与正式版共存。仅用于试用和排障。 |
+
+开发预览版在 Release 中以 `-dev` 后缀和 prerelease 标记区分，不会被当作正式版。每次 `Android checks` 成功后的构建产物也可在 [Actions](https://github.com/zhaozh0321/Jingyu/actions/workflows/android.yml) 的 `jingyu-development-apk` 附件中取得，该附件需要登录 GitHub 才能下载。
+
+两个渠道都要求 Android 8.0（API 26）及以上。安装后首次使用需要在应用的“账户与连接”中填写自己的 DeepSeek API Key。
+
 ## 快速开始
 
-使用已验证的 APK 时，在应用的“账户与连接”中填写自己的 DeepSeek API Key。API 使用费用由服务商计收，项目不提供共享密钥。
+在应用的“账户与连接”中填写自己的 DeepSeek API Key。API 使用费用由服务商计收，项目不提供共享密钥。
 
 开发者可以直接用 Android Studio 打开项目根目录，选择 `app` 模块的 `debug` 构建：
 
