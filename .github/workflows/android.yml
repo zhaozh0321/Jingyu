@@ -29,7 +29,7 @@ jobs:
         run: ./gradlew --no-daemon :app:assembleDebug :app:testDebugUnitTest :app:lintDebug
       - name: Test and lint reports
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: android-reports
           path: |
@@ -37,7 +37,7 @@ jobs:
             app/build/test-results/
           if-no-files-found: ignore
       - name: Development APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: jingyu-development-apk
           path: app/build/outputs/apk/debug/*.apk
