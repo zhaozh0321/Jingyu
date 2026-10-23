@@ -1,0 +1,16 @@
+name: Feature request / 建议
+description: 用实际场景说明需要的改进
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes: {label: 具体场景与当前困难}
+    validations: {required: true}
+  - type: textarea
+    id: outcome
+    attributes: {label: 希望得到的行为和验收标准}
+    validations: {required: true}
+  - type: textarea
+    id: alternatives
+    attributes: {label: 已尝试的方案与可接受的取舍}

@@ -1,0 +1,7 @@
+Jingyu / 鲸语
+Copyright 2026 zhaozh0321
+
+Original application code is licensed under Apache License 2.0.
+Third-party components retain their own copyrights and licenses.
+See THIRD_PARTY.md, vendor/, and app/src/main/assets/licenses/.
+Gradle Wrapper scripts and JAR are from Gradle v8.11.1, Apache-2.0.

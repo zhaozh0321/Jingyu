@@ -1,0 +1,38 @@
+# Build outputs and local tooling
+.gradle/
+**/build/
+build-final-native/
+build-host/
+build-stream-host/
+build-instrumentation/
+android-tools/
+app/src/main/res/values/vendor.xml
+vendor/*.jar
+!vendor/annotation-1.1.0.jar
+!vendor/commonmark-0.13.0.jar
+!vendor/commonmark-ext-gfm-tables-0.13.0.jar
+!vendor/*-sources.jar
+*.apk
+*.aab
+*.idsig
+*.class
+*.log
+__pycache__/
+*.pyc
+# Credentials and device/user data
+.signing/
+*.keystore
+*.jks
+local.properties
+keystore.properties
+.env
+.env.*
+!.env.example
+test-key.txt
+history.json
+memory.enc
+# IDE / OS files
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
